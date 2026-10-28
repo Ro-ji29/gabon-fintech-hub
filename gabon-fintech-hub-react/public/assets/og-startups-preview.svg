@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Dégradé de fond institutionnel FinTech -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061224" />
+      <stop offset="60%" stop-color="#0d2347" />
+      <stop offset="100%" stop-color="#081b38" />
+    </linearGradient>
+
+    <!-- Dégradé d'accent cyan/azur -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+
+    <!-- Filtre de lueur douce -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="35" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Fond Principal -->
+  <rect width="1200" height="630" fill="url(#bgGradient)" />
+
+  <!-- Halos Lumineux Décoratifs -->
+  <circle cx="1020" cy="200" r="280" fill="#0284c7" opacity="0.18" filter="url(#glow)" />
+  <circle cx="200" cy="500" r="220" fill="#38bdf8" opacity="0.12" filter="url(#glow)" />
+
+  <!-- Orbites et Anneaux Graphiques de l'Écosystème -->
+  <g transform="translate(940, 315)" stroke="#38bdf8" fill="none" opacity="0.45">
+    <ellipse rx="360" ry="240" stroke-width="1.5" transform="rotate(-25)" stroke-dasharray="8 6" />
+    <ellipse rx="260" ry="170" stroke-width="2" transform="rotate(15)" />
+    <ellipse rx="160" ry="110" stroke-width="1.5" transform="rotate(-10)" />
+    
+    <!-- Noyau Central -->
+    <circle cx="0" cy="0" r="48" fill="#0a1c38" stroke="#38bdf8" stroke-width="2" />
+    <text x="0" y="8" font-family="'Manrope', -apple-system, sans-serif" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle">
+      GF<tspan fill="#38bdf8">H</tspan>
+    </text>
+
+    <!-- Satellites orbitaux -->
+    <circle cx="-180" cy="-60" r="8" fill="#38bdf8" filter="url(#glow)" />
+    <circle cx="140" cy="110" r="6" fill="#bae0fd" />
+    <circle cx="220" cy="-90" r="10" fill="#38bdf8" />
+  </g>
+
+  <!-- Badge d'en-tête (Eyebrow) -->
+  <g transform="translate(100, 110)">
+    <rect width="270" height="36" rx="18" fill="#0a1c38" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1" />
+    <circle cx="22" cy="18" r="4.5" fill="#38bdf8" />
+    <text x="36" y="23" font-family="'DM Sans', -apple-system, sans-serif" font-size="12" font-weight="700" fill="#38bdf8" letter-spacing="2">
+      APPEL À CANDIDATURES
+    </text>
+  </g>
+
+  <!-- Logo et Identité -->
+  <g transform="translate(100, 175)">
+    <rect width="52" height="52" rx="14" fill="#061224" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1.5" />
+    <text x="26" y="33" font-family="'Manrope', -apple-system, sans-serif" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle">
+      GF<tspan fill="#38bdf8">H</tspan>
+    </text>
+    <text x="70" y="24" font-family="'Manrope', -apple-system, sans-serif" font-size="14" font-weight="800" fill="#ffffff" letter-spacing="1">
+      GABON
+    </text>
+    <text x="70" y="42" font-family="'Manrope', -apple-system, sans-serif" font-size="14" font-weight="800" fill="#38bdf8" letter-spacing="1">
+      FINTECH HUB
+    </text>
+  </g>
+
+  <!-- Titre Principal Accrocheur (LinkedIn) -->
+  <text x="100" y="305" font-family="'Manrope', -apple-system, sans-serif" font-size="52" font-weight="800" fill="#ffffff" letter-spacing="-1.5">
+    Rejoignez le Hub des
+  </text>
+  <text x="100" y="375" font-family="'Manrope', -apple-system, sans-serif" font-size="52" font-weight="800" fill="url(#accentGradient)" letter-spacing="-1.5">
+    Startups FinTech du Gabon
+  </text>
+
+  <!-- Description / Promesse -->
+  <text x="100" y="445" font-family="'DM Sans', -apple-system, sans-serif" font-size="20" font-weight="400" fill="#e0effe" fill-opacity="0.85">
+    Accélération · Mentorat · Investisseurs · Conformité COBAC &amp; CEMAC
+  </text>
+  <text x="100" y="480" font-family="'DM Sans', -apple-system, sans-serif" font-size="18" font-weight="500" fill="#38bdf8">
+    Programme Membres Fondateurs — Places limitées en zone CEMAC
+  </text>
+
+  <!-- Badge Visuel Provisoire (Conformité consigne) -->
+  <g transform="translate(100, 535)">
+    <rect width="250" height="32" rx="8" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1" />
+    <text x="125" y="21" font-family="'DM Sans', -apple-system, sans-serif" font-size="11" font-weight="600" fill="#bae0fd" text-anchor="middle" letter-spacing="0.5">
+      VISUEL OPEN GRAPH PROVISOIRE
+    </text>
+  </g>
+
+  <!-- Format / Dimensions Indicator -->
+  <text x="1100" y="585" font-family="'DM Sans', -apple-system, sans-serif" font-size="13" font-weight="500" fill="#ffffff" fill-opacity="0.4" text-anchor="end">
+    1200 × 630 px · Partage LinkedIn &amp; Réseaux
+  </text>
+</svg>

@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Dégradé de fond institutionnel FinTech Bleu -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061224" />
+      <stop offset="55%" stop-color="#0d2347" />
+      <stop offset="100%" stop-color="#081b38" />
+    </linearGradient>
+
+    <!-- Dégradé d'accent azur / cyan lumineux -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+
+    <linearGradient id="goldBadge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#fbbf24" />
+    </linearGradient>
+
+    <!-- Filtre de lueur douce -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="35" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Fond Principal -->
+  <rect width="1200" height="630" fill="url(#bgGradient)" />
+
+  <!-- Halos Lumineux Décoratifs -->
+  <circle cx="1020" cy="180" r="280" fill="#0284c7" opacity="0.22" filter="url(#glow)" />
+  <circle cx="200" cy="520" r="240" fill="#38bdf8" opacity="0.14" filter="url(#glow)" />
+
+  <!-- Orbites et Couronnes Graphiques (Style Trophée / Défi Innovation) -->
+  <g transform="translate(950, 315)" stroke="#38bdf8" fill="none" opacity="0.45">
+    <ellipse rx="370" ry="250" stroke-width="1.5" transform="rotate(-30)" stroke-dasharray="8 6" />
+    <ellipse rx="270" ry="180" stroke-width="2" transform="rotate(15)" />
+    <ellipse rx="170" ry="120" stroke-width="1.5" transform="rotate(-10)" />
+    
+    <!-- Noyau Central -->
+    <circle cx="0" cy="0" r="52" fill="#0a1c38" stroke="#38bdf8" stroke-width="2.5" />
+    <text x="0" y="8" font-family="'Manrope', -apple-system, sans-serif" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">
+      GF<tspan fill="#38bdf8">H</tspan>
+    </text>
+
+    <!-- Satellites orbitaux dorés et bleus -->
+    <circle cx="-190" cy="-70" r="9" fill="#38bdf8" filter="url(#glow)" />
+    <circle cx="150" cy="120" r="7" fill="#fbbf24" />
+    <circle cx="230" cy="-90" r="11" fill="#38bdf8" />
+  </g>
+
+  <!-- Badge d'en-tête (Eyebrow Concours) -->
+  <g transform="translate(100, 95)">
+    <rect width="320" height="38" rx="19" fill="#0a1c38" stroke="#38bdf8" stroke-opacity="0.6" stroke-width="1.2" />
+    <circle cx="22" cy="19" r="5" fill="#38bdf8" />
+    <text x="38" y="24" font-family="'DM Sans', -apple-system, sans-serif" font-size="12" font-weight="700" fill="#38bdf8" letter-spacing="2">
+      CONCOURS FINTECH GABON 2026
+    </text>
+  </g>
+
+  <!-- Mention Gratuité & Ouverture -->
+  <g transform="translate(435, 95)">
+    <rect width="310" height="38" rx="19" fill="#064e3b" stroke="#34d399" stroke-opacity="0.5" stroke-width="1.2" />
+    <path d="M25 18h-4.5l1.5-6-6.5 8h4l-1.5 6 7-8z" fill="#6ee7b7" />
+    <text x="34" y="24" font-family="'DM Sans', -apple-system, sans-serif" font-size="12" font-weight="700" fill="#6ee7b7" letter-spacing="1">
+      100% GRATUIT · OUVERT À TOUS
+    </text>
+  </g>
+
+  <!-- Logo et Identité Hub -->
+  <g transform="translate(100, 160)">
+    <rect width="52" height="52" rx="14" fill="#061224" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1.5" />
+    <text x="26" y="33" font-family="'Manrope', -apple-system, sans-serif" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle">
+      GF<tspan fill="#38bdf8">H</tspan>
+    </text>
+    <text x="68" y="26" font-family="'Manrope', -apple-system, sans-serif" font-size="12" font-weight="800" fill="#ffffff" letter-spacing="1.5">
+      GABON
+    </text>
+    <text x="68" y="42" font-family="'Manrope', -apple-system, sans-serif" font-size="12" font-weight="800" fill="#38bdf8" letter-spacing="1.5">
+      FINTECH HUB
+    </text>
+  </g>
+
+  <!-- Grand Titre Accrocheur -->
+  <text x="100" y="275" font-family="'Manrope', -apple-system, sans-serif" font-size="48" font-weight="800" fill="#ffffff" letter-spacing="-1">
+    Concours FinTech Gabon 2026
+  </text>
+  <text x="100" y="335" font-family="'Manrope', -apple-system, sans-serif" font-size="36" font-weight="700" fill="url(#accentGradient)" letter-spacing="-0.5">
+    Révélez vos idées · Façonnez la finance de demain
+  </text>
+
+  <!-- Sous-titre explicatif -->
+  <text x="100" y="395" font-family="'DM Sans', -apple-system, sans-serif" font-size="20" font-weight="400" fill="#cbd5e1" opacity="0.9">
+    Étudiants, développeurs, porteurs de projets &amp; startups :
+  </text>
+  <text x="100" y="425" font-family="'DM Sans', -apple-system, sans-serif" font-size="20" font-weight="400" fill="#cbd5e1" opacity="0.9">
+    bénéficiez d'un accompagnement sur mesure, de dotations et de mentorat.
+  </text>
+
+  <!-- Puces d'atouts -->
+  <g transform="translate(100, 470)" font-family="'DM Sans', -apple-system, sans-serif" font-size="15" font-weight="600" fill="#ffffff">
+    <g transform="translate(0, 0)">
+      <circle cx="8" cy="-5" r="4" fill="#38bdf8" />
+      <text x="22" y="0">Aucun frais de participation</text>
+    </g>
+    <g transform="translate(260, 0)">
+      <circle cx="8" cy="-5" r="4" fill="#38bdf8" />
+      <text x="22" y="0">Bootcamp intensif &amp; Mentorat</text>
+    </g>
+    <g transform="translate(540, 0)">
+      <circle cx="8" cy="-5" r="4" fill="#38bdf8" />
+      <text x="22" y="0">Réseau d'investisseurs &amp; Banques</text>
+    </g>
+  </g>
+
+  <!-- Bandeau inférieur -->
+  <line x1="100" y1="535" x2="1100" y2="535" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1" />
+
+  <text x="100" y="575" font-family="'DM Sans', -apple-system, sans-serif" font-size="14" font-weight="600" fill="#94a3b8">
+    gabonfintech-hub.com/concours
+  </text>
+
+  <!-- Tag officiel -->
+  <g transform="translate(900, 555)">
+    <rect width="200" height="30" rx="8" fill="#0284c7" fill-opacity="0.2" stroke="#38bdf8" stroke-width="1" />
+    <text x="100" y="20" font-family="'DM Sans', -apple-system, sans-serif" font-size="11" font-weight="800" fill="#38bdf8" letter-spacing="1" text-anchor="middle">
+      ÉDITION 2026
+    </text>
+  </g>
+</svg>

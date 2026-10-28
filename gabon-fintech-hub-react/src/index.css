@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Typographie & Fond */
+  font-family: 'DM Sans', sans-serif;
+  color: var(--color-navy-950);
+  background: var(--color-ivory-50);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  /* ==========================================================================
+     PALETTE DE BLEUS FINTECH CENTRALISÉE (Variables CSS Maîtresses)
+     ========================================================================== */
+
+  /* 1. BLEUS FONCÉS (Fonds sombres, Hero, structures et typographie contrastée) */
+  --color-navy-950: #061224; /* Bleu nuit abyssal, texte principal et contrastes maximaux */
+  --color-navy-900: #0a1c38; /* Bordures sombres, cartes d'overlay nocturnes */
+  --color-navy-800: #0d2347; /* Bleu nuit institutionnel de référence (Hero, Contact, bannières) */
+  --color-navy-700: #143566; /* Bleu profond intermédiaire pour survols et cartes */
+
+  /* 2. BLEUS D'ACCENT ÉCLATANTS (Badges, icônes, textes d'accentuation, halos) */
+  --color-blue-50:  #f0f7ff; /* Fond ultra-doux (badges inactifs, cartes blanches teintées) */
+  --color-blue-100: #e0effe; /* Cartes douces mises en valeur (Vision, Summit, etc.) */
+  --color-blue-200: #bae0fd; /* Bordures de badges, anneaux légers et sélection */
+  --color-blue-300: #38bdf8; /* Bleu azur / cyan vif (accent phare sur fond sombre, Hero accent) */
+  --color-blue-400: #0ea5e9; /* Bleu dynamique pour lueurs et dégradés */
+  --color-blue-500: #0284c7; /* États de focus et anneaux interactifs */
+
+  /* 3. BLEUS PRINCIPAUX & DE MARQUE (Boutons, titres, liens, prix) */
+  --color-blue-600: #0369a1; /* Puces, icônes principales, accentuation */
+  --color-blue-700: #025585; /* Titres d'accent, bordures recommandées, liens survolés */
+  --color-blue-800: #07456b; /* Bleu soutenu lisible sur fond clair (titres, prix, boutons) */
+  --color-blue-900: #08334f; /* Texte haute lisibilité sur fond bleu clair */
+
+  /* 4. NEUTRES COMPLÉMENTAIRES */
+  --color-ivory-50: #fffefa;
+  --color-ivory-100: #f5f4ed;
+
+  /* 5. VALEURS RGB POUR LES EFFETS D'OMBRES ET DE LUEURS TRANSLUCIDES */
+  --color-glow-blue: 56, 189, 248;   /* Correspond à #38bdf8 (cyan/azur lumineux) */
+  --color-shadow-navy: 13, 35, 71;    /* Correspond à #0d2347 (bleu nuit profond) */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 86px;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  text-align: left;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+::selection {
+  color: var(--color-navy-950);
+  background: var(--color-blue-200);
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  color: var(--color-navy-800);
+  font-size: .75rem;
+  font-weight: 700;
+}
+
+.form-control {
+  width: 100%;
+  min-height: 2.75rem;
+  border: 1px solid rgb(6 18 36 / 16%);
+  border-radius: .75rem;
+  background: var(--color-ivory-50);
+  padding: .7rem .85rem;
+  color: var(--color-navy-950);
+  font-size: .8rem;
+  font-weight: 400;
+  outline: none;
+}
+
+.form-control:focus {
+  border-color: var(--color-blue-500);
+  box-shadow: 0 0 0 3px rgb(56 189 248 / 35%);
+}
+
+.form-control::placeholder {
+  color: rgb(13 35 71 / 43%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
