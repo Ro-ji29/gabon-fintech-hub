@@ -10,11 +10,9 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
-    "framer-motion": "^14.3.0",
+    "vite": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "react-router-dom": "^7.18.4",
-    "vite": "latest"
+    "react-dom": "latest"
   },
   "devDependencies": {
     "autoprefixer": "latest",

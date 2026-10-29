@@ -6,8 +6,9 @@
 node_modules/
 npm/
 
-# Build de production (généré automatiquement par `npm run build`)
+# Build de production (généré par `npm run build`)
 dist/
+build/
 
 # Variables d'environnement — NE JAMAIS VERSIONNER
 .env
@@ -15,7 +16,7 @@ dist/
 .env.production
 .env.*.local
 
-# Cache Vite / éditeur
+# Cache Vite / outillage
 .vite/
 *.local
 
@@ -23,15 +24,15 @@ dist/
 .DS_Store
 **/.DS_Store
 
+# Archives
+*.zip
+*.tar.gz
+
 # Logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# Archives
-*.zip
-*.tar.gz
 
 # Éditeur
 .vscode/settings.json
