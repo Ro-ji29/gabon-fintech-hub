@@ -7,13 +7,31 @@ import { Eyebrow } from '../../components/Eyebrow';
 export function Hero() {
   const shouldReduceMotion = useReducedMotion();
 
-  // Badges satellites avec paramètres de flottement personnalisés (désynchronisation organique)
+  // Piliers : anneau intérieur, aux quatre diagonales
   const tags = [
-    { label: 'Innovation', pos: 'left-[5%] top-[19%]', delay: 0, floatDuration: 3.8, floatOffset: -3.5 },
-    { label: 'Talents', pos: 'right-[2%] top-[27%]', delay: 1, floatDuration: 4.4, floatOffset: 4 },
-    { label: 'Finance', pos: 'bottom-[22%] left-0', delay: 2, floatDuration: 3.5, floatOffset: -3 },
-    { label: 'Régulation', pos: 'bottom-[14%] right-[5%]', delay: 3, floatDuration: 4.8, floatOffset: 3.5 },
+    { label: 'Innovation', pos: 'left-[32%] top-[32%]', delay: 0, floatDuration: 3.8, floatOffset: -3.5 },
+    { label: 'Talents', pos: 'left-[68%] top-[32%]', delay: 1, floatDuration: 4.4, floatOffset: 4 },
+    { label: 'Finance', pos: 'left-[32%] top-[68%]', delay: 2, floatDuration: 3.5, floatOffset: -3 },
+    { label: 'Régulation', pos: 'left-[68%] top-[68%]', delay: 3, floatDuration: 4.8, floatOffset: 3.5 },
   ];
+
+  // Secteurs de l'écosystème FinTech gabonais : orbite extérieure
+  const sectors = [
+    'PayTech', 'InsurTech', 'RegTech', 'Cybersécurité', 'Néobanques', 'LendTech',
+    'WealthTech', 'AgriTech', 'ID numérique', 'Data & Analytics', 'Blockchain', 'Crypto',
+  ];
+  const sectorPositions = sectors.map((label, i) => {
+    const angle = ((i * 30 - 90) * Math.PI) / 180;
+    return {
+      label,
+      left: `${50 + 41 * Math.cos(angle)}%`,
+      top: `${50 + 46 * Math.sin(angle)}%`,
+      floatDuration: 4 + (i % 4) * 0.45,
+      floatOffset: i % 2 ? 2.5 : -2.5,
+    };
+  });
+
+  const foundations = ['Énergie', 'Data centers', 'Connectivité'];
 
   return (
     <section id="accueil" className="relative isolate overflow-hidden bg-navy-800 text-white">
@@ -88,7 +106,7 @@ export function Hero() {
 
         {/* ── Illustration orbitale animée ─────────────────────────────── */}
         <motion.div
-          className="relative mx-auto grid aspect-square w-full max-w-[440px] place-items-center"
+          className="relative mx-auto grid aspect-square w-full max-w-[440px] place-items-center md:max-w-[540px]"
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
@@ -190,9 +208,8 @@ export function Hero() {
 
           {/* 4. Badges satellites : découplage entrée progressive / flottement indépendant / survol */}
           {tags.map(({ label, pos, delay, floatDuration, floatOffset }) => (
+            <div key={label} className={cx('absolute z-20 -translate-x-1/2 -translate-y-1/2', pos)}>
             <motion.div
-              key={label}
-              className={cx('absolute z-20', pos)}
               initial={{ opacity: 0, scale: 0.7 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -222,17 +239,55 @@ export function Hero() {
                 {label}
               </motion.span>
             </motion.div>
+            </div>
           ))}
 
-          {/* 5. Texte d'accroche avec apparition discrète */}
-          <motion.span
-            className="absolute bottom-0 right-0 text-right text-[9px] leading-4 tracking-[.16em] text-ivory-100/60 select-none"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.95, ease: [0.22, 1, 0.36, 1] }}
-          >
-            CONNECTER LES IDÉES<br />AU CAPITAL ET AUX MARCHÉS
-          </motion.span>
+          {/* 5. Secteurs : orbite extérieure (tablette et ordinateur) */}
+          {sectorPositions.map(({ label, left, top, floatDuration, floatOffset }, i) => (
+            <div key={label} className="absolute z-20 hidden -translate-x-1/2 -translate-y-1/2 md:block" style={{ left, top }}>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.7 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 1.1 + i * 0.07, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <motion.span
+                className="inline-flex cursor-default items-center gap-1.5 whitespace-nowrap rounded-full border border-white/15 bg-navy-800/90 px-2.5 py-1 text-[10px] font-medium text-ivory-100/85 shadow-md backdrop-blur-sm transition-colors duration-200 hover:border-blue-300/60 hover:text-white select-none"
+                animate={shouldReduceMotion ? { y: 0 } : { y: [-floatOffset, floatOffset, -floatOffset] }}
+                transition={{ duration: floatDuration, repeat: Infinity, ease: 'easeInOut' }}
+                whileHover={{ scale: 1.08, transition: { duration: 0.2 } }}
+              >
+                <span className="h-1 w-1 rounded-full bg-blue-300" aria-hidden="true" />
+                {label}
+              </motion.span>
+            </motion.div>
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Secteurs (mobile) et fondations */}
+        <motion.div
+          className="md:col-start-2"
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.95, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <ul className="flex flex-wrap justify-center gap-2 md:hidden" aria-label="Secteurs de l'écosystème">
+            {sectors.map((label) => (
+              <li
+                key={label}
+                className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-navy-700/80 px-2.5 py-1 text-[11px] font-medium text-ivory-100/85"
+              >
+                <span className="h-1 w-1 rounded-full bg-blue-300" aria-hidden="true" />
+                {label}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-5 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[9px] font-bold tracking-[.17em] text-ivory-100/60 md:mt-0">
+            <span className="text-blue-300">FONDATIONS</span>
+            {foundations.map((f) => (
+              <span key={f} className="uppercase">· {f}</span>
+            ))}
+          </p>
         </motion.div>
       </div>
     </section>
