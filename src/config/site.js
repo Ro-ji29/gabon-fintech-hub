@@ -31,6 +31,6 @@ export const SITE_CONFIG = {
   linkedInUrl: 'https://www.linkedin.com/company/gabon-fintech-hub/',
   name: 'Gabon FinTech Hub',
   legalName: 'Association Gabon FinTech Hub',
-  defaultOgImage: '/assets/og-startups-preview.svg',
+  defaultOgImage: '/assets/og-gfh.png',
   contestOgImage: '/assets/og-concours-preview.svg',
 };
