@@ -22,19 +22,4 @@ export const placeholders = {
   pillars: [['bulb', 'Innovation', 'Stimuler la création de solutions financières numériques adaptées aux réalités locales et régionales.'], ['education', 'Éducation & Talents', 'Former, certifier et valoriser la nouvelle génération de leaders FinTech.'], ['scale', 'Réglementation & Plaidoyer', 'Faciliter un dialogue constructif entre innovateurs, institutions et autorités.'], ['arrow', 'Financement & Investissement', 'Connecter les startups aux investisseurs, fonds et partenaires stratégiques.']],
   resources: [['CADRE RÉGLEMENTAIRE', 'Comprendre les règles du jeu', 'Repères sur la conformité et le dialogue avec les autorités.'], ['INNOVATION FINANCIÈRE', 'La FinTech en contexte', 'Les tendances qui transforment les services financiers en Afrique Centrale.'], ['INCLUSION', 'Élargir l’accès', 'Pistes pour concevoir des services financiers accessibles à tous.']],
   social: ['LinkedIn', 'Facebook', 'YouTube'],
-  openGraphStartups: {
-    isProvisional: true,
-    dimensions: '1200x630',
-    path: '/assets/og-startups-preview.svg',
-    title: 'Gabon FinTech Hub — Inscription Startups',
-    description: 'Rejoignez le réseau des pionniers de la finance technologique au Gabon et en Afrique Centrale.',
-  },
-  openGraphConcours: {
-    isProvisional: true,
-    dimensions: '1200x630',
-    path: '/assets/og-concours-preview.svg',
-    title: 'Concours FinTech Gabon 2026 — Inscription Gratuite',
-    description: 'Participez au grand concours national de l’innovation financière au Gabon. Inscription 100% gratuite et ouverte à tous.',
-  },
 };
-

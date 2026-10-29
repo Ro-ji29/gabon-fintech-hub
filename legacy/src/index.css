@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { font-family: 'DM Sans', sans-serif; color: #082722; background: #fffefa; font-synthesis: none; text-rendering: optimizeLegibility; }
+html { scroll-behavior: smooth; scroll-padding-top: 86px; }
+body { min-width: 320px; margin: 0; text-align: left; }
+button, input, select, textarea { font: inherit; }
+::selection { color: #082722; background: #87dbb2; }
+.form-label { display: flex; flex-direction: column; gap: .4rem; color: #123c35; font-size: .75rem; font-weight: 700; }
+.form-control { width: 100%; min-height: 2.75rem; border: 1px solid rgb(8 39 34 / 16%); border-radius: .75rem; background: #fffefa; padding: .7rem .85rem; color: #082722; font-size: .8rem; font-weight: 400; outline: none; }
+.form-control:focus { border-color: #15805e; box-shadow: 0 0 0 3px rgb(135 219 178 / 35%); }
+.form-control::placeholder { color: rgb(18 60 53 / 43%); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
