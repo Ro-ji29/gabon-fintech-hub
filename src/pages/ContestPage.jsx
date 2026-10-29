@@ -6,17 +6,11 @@ import { SeoMeta } from '../components/SeoMeta';
 import { concoursData } from '../data';
 import { ContestCirclesIllustration } from '../features/contest/ContestCirclesIllustration';
 import { ContestInBrief } from '../features/contest/ContestInBrief';
-import { ContestRegistrationForm } from '../features/contest/ContestRegistrationForm';
 import { ContestFaq } from '../features/contest/ContestFaq';
 
 export function ContestPage() {
-  const handleScrollToForm = (e) => {
-    e.preventDefault();
-    const target = document.getElementById('formulaire-concours');
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  // Les candidatures passent par le formulaire officiel (lien des flyers / QR codes)
+  const APPLICATION_URL = 'https://postuler.gabonfintech-hub.com';
 
   return (
     <>
@@ -62,7 +56,7 @@ export function ContestPage() {
 
             {/* Bouton d'ancrage vers le formulaire */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Button href="#formulaire-concours" onClick={handleScrollToForm} light>
+              <Button href={APPLICATION_URL} target="_blank" rel="noopener noreferrer" light>
                 S'inscrire au concours <Icon className="h-4 w-4" />
               </Button>
               <a
@@ -80,8 +74,24 @@ export function ContestPage() {
       {/* ── 2. Le concours en bref ── */}
       <ContestInBrief />
 
-      {/* ── 3. Formulaire d'inscription ── */}
-      <ContestRegistrationForm />
+      {/* ── 3. Candidature : renvoi vers le formulaire officiel ── */}
+      <section id="formulaire-concours" className="bg-navy-800 py-16 text-white md:py-20">
+        <div className="mx-auto max-w-3xl px-5 text-center lg:px-8">
+          <ScrollReveal>
+            <h2 className="font-display text-3xl font-semibold tracking-[-.04em] sm:text-4xl">
+              Prêt à représenter le Gabon ?
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-base leading-7 text-ivory-100/90">
+              Les candidatures se font via notre formulaire officiel. Date limite : 12 novembre 2026.
+            </p>
+            <div className="mt-8 flex justify-center">
+              <Button href={APPLICATION_URL} target="_blank" rel="noopener noreferrer" light>
+                Postuler maintenant <Icon className="h-4 w-4" />
+              </Button>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
 
       {/* ── 4. Mini-FAQ (3 à 4 questions) ── */}
       <ContestFaq />
