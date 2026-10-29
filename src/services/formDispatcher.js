@@ -221,4 +221,3 @@ export async function dispatchFormSubmission(formType, data) {
     "Impossible de joindre le service d'envoi. Veuillez vérifier votre connexion Internet et réessayer."
   );
 }
-

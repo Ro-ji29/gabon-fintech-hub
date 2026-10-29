@@ -42,4 +42,3 @@ export async function submitContactMessage(data) {
     destinations: result.destinations,
   };
 }
-

@@ -41,3 +41,8 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Sauvegarde locale avant migration
+backup-avant-migration/
+
+build/

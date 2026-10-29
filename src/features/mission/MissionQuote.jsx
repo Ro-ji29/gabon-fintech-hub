@@ -36,4 +36,3 @@ export function MissionQuote() {
     </section>
   );
 }
-

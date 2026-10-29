@@ -37,7 +37,7 @@
     <ellipse rx="370" ry="250" stroke-width="1.5" transform="rotate(-30)" stroke-dasharray="8 6" />
     <ellipse rx="270" ry="180" stroke-width="2" transform="rotate(15)" />
     <ellipse rx="170" ry="120" stroke-width="1.5" transform="rotate(-10)" />
-    
+
     <!-- Noyau Central -->
     <circle cx="0" cy="0" r="52" fill="#0a1c38" stroke="#38bdf8" stroke-width="2.5" />
     <text x="0" y="8" font-family="'Manrope', -apple-system, sans-serif" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">

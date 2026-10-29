@@ -2,7 +2,7 @@
  * ============================================================================
  * GABON FINTECH HUB — SCRIPT GOOGLE APPS SCRIPT POUR GOOGLE SHEETS
  * ============================================================================
- * 
+ *
  * Ce script est à copier-coller dans votre Google Sheet (Extensions > Apps Script).
  * Il reçoit automatiquement les soumissions de formulaires depuis le site
  * et les range dans des onglets dédiés avec en-têtes et détection de doublons.
@@ -253,4 +253,3 @@ function getOrCreateSheet(ss, sheetName) {
   }
   return sheet;
 }
-

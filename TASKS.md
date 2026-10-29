@@ -1,6 +1,6 @@
 # Gabon FinTech Hub — Feuille de Route & Liste des Tâches (TASKS.md)
 
-Ce document répertorie l'ensemble des tâches de développement, des données à remplacer et des fonctionnalités manquantes ou à finaliser sur la plateforme **Gabon FinTech Hub**.  
+Ce document répertorie l'ensemble des tâches de développement, des données à remplacer et des fonctionnalités manquantes ou à finaliser sur la plateforme **Gabon FinTech Hub**.
 Il est structuré par page et domaine, avec des cases à cocher à maintenir à jour au fil des livraisons.
 
 ---

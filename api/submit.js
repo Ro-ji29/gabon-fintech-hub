@@ -130,7 +130,7 @@ function buildEmailHtml(formType, dossierId, data, submittedAtFormatted, isTest,
             </p>
 
             <div style="background: #e0f2fe; border: 1px solid #bae6fd; border-radius: 8px; padding: 10px 14px; margin-bottom: 20px; font-size: 12px; color: #0369a1;">
-              <strong>Dossier N° :</strong> <code style="font-family: monospace; font-size: 13px; font-weight: 700;">${dossierId}</code> &nbsp;|&nbsp; 
+              <strong>Dossier N° :</strong> <code style="font-family: monospace; font-size: 13px; font-weight: 700;">${dossierId}</code> &nbsp;|&nbsp;
               <strong>Reçu le :</strong> ${submittedAtFormatted}
               ${utmSource ? `<br><strong>Canal UTM :</strong> ${utmSource}` : ''}
             </div>
@@ -314,4 +314,3 @@ export default async function handler(req, res) {
     });
   }
 }
-
