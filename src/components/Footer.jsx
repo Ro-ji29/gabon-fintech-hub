@@ -38,12 +38,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-9 px-5 pb-8 pt-14 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div>
           <Link to="/" className="flex items-center gap-3">
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-navy-800 font-display text-sm font-extrabold text-white">
-              GF<span className="text-blue-300">H</span>
-            </span>
-            <span className="font-display text-[10px] font-extrabold uppercase leading-tight tracking-[.08em] text-navy-950">
-              Gabon<br />FinTech Hub
-            </span>
+            <img src="/assets/gfh-logo.png" alt="Gabon FinTech Hub" width="318" height="138" className="h-12 w-auto" />
           </Link>
           <p className="mt-4 text-xs leading-5 text-navy-700/70">
             Ensemble, faisons grandir<br />la finance de demain.

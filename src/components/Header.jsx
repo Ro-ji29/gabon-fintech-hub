@@ -52,24 +52,13 @@ export function Header() {
           aria-label="Gabon FinTech Hub, accueil"
           onClick={() => setOpen(false)}
         >
-          <span
-            className={cx(
-              'grid h-9 w-9 sm:h-10 sm:w-10 place-items-center rounded-xl font-display text-sm font-extrabold tracking-tighter transition-colors duration-300',
-              isSolid
-                ? 'bg-navy-800 text-white shadow-sm'
-                : 'border border-white/25 bg-white/15 text-white backdrop-blur-sm'
-            )}
-          >
-            GF<span className="text-blue-300">H</span>
-          </span>
-          <span
-            className={cx(
-              'font-display text-[9px] sm:text-[10px] font-extrabold uppercase leading-[1.15] tracking-[.08em] transition-colors duration-300',
-              isSolid ? 'text-navy-950' : 'text-white'
-            )}
-          >
-            Gabon<br />FinTech Hub
-          </span>
+          <img
+            src={isSolid ? '/assets/gfh-logo.png' : '/assets/gfh-logo-white.png'}
+            alt="Gabon FinTech Hub"
+            width="318"
+            height="138"
+            className="h-10 w-auto sm:h-11"
+          />
         </Link>
 
         {/* Navigation Desktop */}
