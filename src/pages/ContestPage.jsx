@@ -16,9 +16,9 @@ export function ContestPage() {
     <>
       {/* ── Balises Meta & Open Graph propres pour partage LinkedIn ── */}
       <SeoMeta
-        title="Concours FinTech Gabon 2026 · Inscription Gratuite · Gabon FinTech Hub"
+        title="Elite FinTech Competition · 1re édition · Gabon FinTech Hub"
         description="Participez au grand concours national d'innovation financière au Gabon. Inscription 100% gratuite et ouverte à tous. Révélez vos solutions FinTech."
-        ogTitle="Concours FinTech Gabon 2026 — Inscription gratuite & ouverte à tous"
+        ogTitle="Elite FinTech Competition — En route vers le Canada 2027"
         ogDescription="Grand défi national de l'innovation financière au Gabon : bootcamp, mentorat d'experts, dotations et opportunités d'accélération avec le Gabon FinTech Hub."
         ogImage="/assets/og-concours-preview.svg"
         ogUrl="/concours"
