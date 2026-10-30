@@ -12,7 +12,7 @@ export function ContestHighlight() {
     <section
       id="concours-section"
       className="relative isolate overflow-hidden border-b border-navy-900/10 bg-gradient-to-b from-navy-800 via-navy-900 to-navy-950 px-5 py-14 text-white lg:px-8 lg:py-20"
-      aria-label="Grand Concours FinTech Gabon"
+      aria-label="Elite FinTech Competition"
     >
       {/* ── Cercles orbitaux légers en arrière-plan (rappel de la charte visuelle) ── */}
       <div className="pointer-events-none absolute -right-28 -top-28 -z-10 h-80 w-80 rounded-full border border-blue-400/15" aria-hidden="true" />
@@ -35,40 +35,43 @@ export function ContestHighlight() {
               <div className="flex flex-wrap items-center gap-2.5">
                 <Eyebrow light>
                   <span className="mr-2 inline-block h-2 w-2 rounded-full bg-blue-300" />
-                  DÉFI NATIONAL D'INNOVATION
+                  1<sup>re</sup>&nbsp;ÉDITION · ÉVÉNEMENT PRIVÉ
                 </Eyebrow>
 
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/40 bg-emerald-500/15 px-3 py-1 text-xs font-semibold text-emerald-200 backdrop-blur-sm">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-300/40 bg-amber-400/10 px-3 py-1 text-xs font-semibold text-amber-200 backdrop-blur-sm">
                   <span
-                    className={`h-1.5 w-1.5 rounded-full bg-emerald-400 ${shouldReduceMotion ? '' : 'animate-pulse'}`}
+                    className={`h-1.5 w-1.5 rounded-full bg-amber-300 ${shouldReduceMotion ? '' : 'animate-pulse'}`}
                     aria-hidden="true"
                   />
-                  Gratuit et ouvert à tous
+                  Sur invitation · Places limitées
                 </span>
               </div>
 
               {/* Titre accrocheur */}
               <h2 className="mt-4 font-display text-3xl font-bold leading-tight tracking-[-.05em] text-white sm:text-4xl md:text-5xl">
-                Grand Concours FinTech Gabon
+                Elite FinTech Competition
               </h2>
+              <p className="mt-2 font-display text-lg font-semibold text-blue-300 sm:text-xl">
+                En route vers le Canada 2027
+              </p>
 
               {/* Courte phrase décrivant l'opportunité et la gratuité */}
               <p className="mt-4 max-w-2xl text-base leading-7 text-ivory-100/90 sm:text-lg">
-                Vous développez une solution financière innovante pour le Gabon et la zone CEMAC ?
-                Participez au défi de référence pour révéler votre potentiel, bénéficier de mentorat
-                et accélérer votre visibilité. Inscription 100% gratuite et ouverte à tous les porteurs de projet.
+                Pour sa toute première édition, le Gabon FinTech Hub réunit à huis clos un cercle
+                restreint de décideurs de l'écosystème. Six fintechs gabonaises finalistes présentent
+                leur solution devant un jury d'experts, et la lauréate représentera le Gabon au
+                Canada Africa FinTech Summit 2027 à Toronto.
               </p>
 
               {/* Informations génériques sans chiffres inventés */}
-              <p className="mt-2 text-xs text-blue-200/80">
-                {/* À CONFIRMER : Calendrier officiel des phases, bootcamp et dotations définitives */}
-                Détails du calendrier officiel, critères et étapes communiqués très prochainement.
+              <p className="mt-3 text-xs font-semibold tracking-wide text-blue-200/90">
+                5 décembre 2026 · Candidatures ouvertes jusqu'au 12 novembre 2026
               </p>
 
               {/* Bouton d'action avec libellé unique et cohérent */}
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <Button to="/concours" light className="font-bold shadow-lg">
-                  Participer au concours <Icon name="spark" className="h-4 w-4" />
+                <Button href="https://postuler.gabonfintech-hub.com" target="_blank" rel="noopener noreferrer" light className="font-bold shadow-lg">
+                  Postuler <Icon name="spark" className="h-4 w-4" />
                 </Button>
               </div>
             </div>
@@ -84,10 +87,10 @@ export function ContestHighlight() {
                   <span className="grid h-7 w-7 place-items-center rounded-lg bg-blue-300/20 text-blue-300">
                     <Icon name="rocket" className="h-4 w-4" ariaHidden={true} />
                   </span>
-                  <h3 className="font-display text-sm font-bold text-white">Tremplin & Mentorat</h3>
+                  <h3 className="font-display text-sm font-bold text-white">Une première au Gabon</h3>
                 </div>
                 <p className="mt-2 text-xs leading-5 text-white/75">
-                  Accompagnement personnalisé par des praticiens et experts du secteur bancaire et technologique.
+                  La toute première compétition FinTech d'élite organisée par le Gabon FinTech Hub.
                 </p>
               </motion.div>
 
@@ -100,10 +103,10 @@ export function ContestHighlight() {
                   <span className="grid h-7 w-7 place-items-center rounded-lg bg-blue-300/20 text-blue-300">
                     <Icon name="spark" className="h-4 w-4" ariaHidden={true} />
                   </span>
-                  <h3 className="font-display text-sm font-bold text-white">Visibilité Régionale</h3>
+                  <h3 className="font-display text-sm font-bold text-white">Un cercle restreint</h3>
                 </div>
                 <p className="mt-2 text-xs leading-5 text-white/75">
-                  Présentation des projets sélectionnés devant les décideurs financiers et acteurs publics.
+                  Un événement privé, sur invitation, réservé aux décideurs : banques, régulateurs, investisseurs et partenaires.
                 </p>
               </motion.div>
 
@@ -116,10 +119,10 @@ export function ContestHighlight() {
                   <span className="grid h-7 w-7 place-items-center rounded-lg bg-blue-300/20 text-blue-300">
                     <Icon name="network" className="h-4 w-4" ariaHidden={true} />
                   </span>
-                  <h3 className="font-display text-sm font-bold text-white">Réseau & Partenariats</h3>
+                  <h3 className="font-display text-sm font-bold text-white">Cap sur Toronto</h3>
                 </div>
                 <p className="mt-2 text-xs leading-5 text-white/75">
-                  Mise en relation directe avec l'écosystème FinTech et opportunités de synergies durables.
+                  La lauréate représente le Gabon au CAFS 2027, vol et hôtel entièrement pris en charge par le GFH.
                 </p>
               </motion.div>
             </div>
