@@ -9,26 +9,31 @@ import { Link } from 'react-router-dom';
 export function Events() {
   const shouldReduceMotion = useReducedMotion();
 
-  // Cartes d'événements génériques sans dates inventées
-  // À CONFIRMER : Calendrier officiel et dates des prochains événements à intégrer dès validation
+  // Agenda : événement GFH et rendez-vous FinTech partenaires
   const upcomingEvents = [
     {
-      title: 'Gabon FinTech Summit',
-      category: 'Grande conférence annuelle',
-      status: 'Prochains événements communiqués prochainement',
-      description: 'Le rendez-vous de référence réunissant innovateurs, institutions financières et régulateurs de la zone CEMAC.',
+      title: 'Elite FinTech Competition',
+      category: 'Organisé par le GFH · 1re édition',
+      when: '5 décembre 2026 · Gabon',
+      description: 'Événement privé : six fintechs gabonaises finalistes devant un jury d’experts, pour représenter le Gabon au CAFS 2027.',
+      href: 'https://postuler.gabonfintech-hub.com',
+      cta: 'Postuler avant le 12 novembre',
     },
     {
-      title: 'FinTech Breakfast Club',
-      category: 'Rencontre & Échanges',
-      status: 'Prochains événements communiqués prochainement',
-      description: 'Des matinées informelles de dialogue et de partage d’expérience entre entrepreneurs et experts du secteur.',
+      title: 'Canada Africa FinTech Summit 2027',
+      category: 'Sommet international',
+      when: 'Date à confirmer · Toronto, Canada',
+      description: 'Le sommet qui relie les écosystèmes FinTech du Canada et de l’Afrique. La fintech lauréate de l’Elite FinTech Competition y représentera le Gabon.',
+      href: 'https://cafsummit.com',
+      cta: 'Visiter le site du CAFS',
     },
     {
-      title: 'Ateliers Réglementaires & Sandboxes',
-      category: 'Pratique & Régulation',
-      status: 'Prochains événements communiqués prochainement',
-      description: 'Sessions d’accompagnement sur les évolutions du cadre juridique, la conformité et les dispositifs d’expérimentation.',
+      title: 'Cameroon Fintech Week',
+      category: 'Réseau AFN · 1re édition',
+      when: '23–24 novembre 2026 · Douala, Cameroun',
+      description: 'La première édition de la semaine FinTech camerounaise, publiée par l’Africa Fintech Network.',
+      href: 'https://africafintechnetwork.com/event/cameroon-fintech-week-first-edition/',
+      cta: 'Voir l’événement',
     },
   ];
 
@@ -89,7 +94,7 @@ export function Events() {
             <div>
               <span>GF<span className="text-blue-300">H</span></span>
               <small className="mt-1 block text-[8px] font-semibold tracking-[.17em] text-white/75">
-                FINTECH SUMMIT
+                ELITE FINTECH
               </small>
             </div>
           </motion.div>
@@ -97,29 +102,30 @@ export function Events() {
 
         <div>
           <span className="text-[10px] font-bold uppercase tracking-[.18em] text-blue-800">
-            RENCONTRE DE RÉFÉRENCE
+            ÉVÉNEMENT PHARE · 1<sup>re</sup>&nbsp;ÉDITION · SUR INVITATION
           </span>
           <h3 className="mt-1 font-display text-2xl font-semibold text-navy-950 sm:text-3xl">
-            Gabon FinTech Summit
+            Elite FinTech Competition
           </h3>
+          <p className="mt-1 text-sm font-semibold text-blue-800">5 décembre 2026 · En route vers le Canada 2027</p>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-navy-800/75">
-            Le grand sommet annuel rassemblant les forces vives de l'écosystème : conférences plénières,
-            décryptages réglementaires, démos technologiques et opportunités de partenariats.
+            Notre tout premier rendez-vous : un événement privé réunissant les décideurs de l'écosystème
+            FinTech gabonais autour de six finalistes. La lauréate représentera le Gabon au Canada
+            Africa FinTech Summit 2027 à Toronto.
           </p>
           <div className="mt-4 flex flex-wrap items-center gap-4">
             <Link
-              to="/evenements"
+              to="/concours"
               className="group inline-flex items-center gap-2 text-sm font-semibold text-blue-800 transition hover:text-blue-900"
             >
-              <span>Découvrir le programme sur la page Événements</span>
+              <span>Découvrir la compétition</span>
               <Icon className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
             </Link>
           </div>
         </div>
       </ScrollReveal>
 
-      {/* Cartes d'événements génériques sans dates inventées */}
-      {/* À CONFIRMER : Mettre à jour avec les dates réelles dès confirmation du calendrier officiel */}
+      {/* Agenda */}
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {upcomingEvents.map((evt, i) => (
           <motion.div
@@ -148,8 +154,17 @@ export function Events() {
             <div className="mt-6 border-t border-navy-900/10 pt-4">
               <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-blue-900">
                 <span className="h-2 w-2 rounded-full bg-blue-500" />
-                {evt.status}
+                {evt.when}
               </span>
+              <a
+                href={evt.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group mt-3 flex items-center gap-1.5 text-xs font-bold text-blue-800 transition hover:text-blue-900"
+              >
+                <span>{evt.cta}</span>
+                <Icon className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
+              </a>
             </div>
           </motion.div>
         ))}
