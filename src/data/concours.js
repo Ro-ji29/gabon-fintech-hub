@@ -3,7 +3,7 @@
 // dans l'écosystème FinTech au Gabon et en zone CEMAC.
 
 export const concoursData = {
-  title: 'Concours FinTech Gabon 2026', // À CONFIRMER : nom officiel du concours
+  title: 'Elite FinTech Competition',
   tagline:
     'Le grand défi national pour révéler, primer et accélérer les initiatives en finance numérique, paiement mobile et inclusion financière au Gabon et en zone CEMAC.', // À CONFIRMER
   accessibilityNotice: 'Inscription 100% gratuite et ouverte à tous',
