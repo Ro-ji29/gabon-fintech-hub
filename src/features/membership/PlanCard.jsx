@@ -33,15 +33,41 @@ export function PlanCard({ plan, onSelect }) {
       </div>
 
       <div className="flex min-h-[90px] flex-col justify-center border-y border-navy-900/10 py-3">
-        {/* À CONFIRMER : Montant et modalités de cotisation à confirmer lors de l'assemblée constitutive */}
-        <strong className="font-display text-lg font-bold leading-snug text-blue-800">
-          {plan.price}
-        </strong>
-        <span className="mt-1 text-[10px] text-navy-700/60">
-          {plan.founder
-            ? 'Adhésion offerte pour les membres fondateurs'
-            : ' '}
-        </span>
+        {/* Tarif normal barré : adhésion offerte jusqu'en 2030 */}
+        {plan.price.startsWith('Gratuit') ? (
+          <>
+            <strong className="font-display text-lg font-bold leading-snug text-blue-800">
+              {plan.price}
+            </strong>
+            <span className="mt-1 text-[10px] text-navy-700/60">Sans cotisation</span>
+          </>
+        ) : (
+          <>
+            <del className="w-fit text-sm font-semibold leading-snug no-underline">
+              <span className="sr-only">Tarif normal : </span>
+              <motion.span
+                className="box-decoration-clone bg-no-repeat text-[#8b93a3]"
+                style={{
+                  backgroundImage:
+                    'linear-gradient(transparent calc(50% - 1px), #f43f5e calc(50% - 1px), #f59e0b calc(50% + 1px), transparent calc(50% + 1px))',
+                  backgroundPosition: 'left center',
+                }}
+                initial={{ backgroundSize: '0% 100%' }}
+                whileInView={{ backgroundSize: '100% 100%' }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
+              >
+                {plan.price}
+              </motion.span>
+            </del>
+            <div className="mt-1.5 flex flex-wrap items-center gap-2">
+              <strong className="font-display text-xl font-bold leading-none text-blue-800">Gratuit</strong>
+              <span className="rounded-full bg-gradient-to-r from-blue-700 to-blue-500 px-2.5 py-0.5 text-[10px] font-bold tracking-wide text-white shadow-sm">
+                jusqu'en 2030
+              </span>
+            </div>
+          </>
+        )}
       </div>
 
       {plan.offers && (

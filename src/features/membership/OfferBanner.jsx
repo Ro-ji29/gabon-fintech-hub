@@ -30,13 +30,11 @@ export function OfferBanner({ showCounter = false }) {
 
       <div className="min-w-[210px] flex-1">
         <Eyebrow light>OFFRE MEMBRES FONDATEURS</Eyebrow>
-        {/* À CONFIRMER : Modalités définitives de l'offre d'adhésion pour les membres fondateurs */}
         <h3 className="font-display text-lg font-semibold sm:text-xl">
-          Adhésion offerte pour les membres fondateurs
+          Adhésion gratuite jusqu'en 2030
         </h3>
         <p className="mt-1 text-xs text-white/75">
-          {/* À CONFIRMER : Quota exact de membres fondateurs par catégorie */}
-          Offre exclusive réservée aux premiers adhérents engagés dans la création du Hub.
+          Toutes les formules sont offertes jusqu'en 2030 aux membres qui rejoignent le Hub dès sa création.
         </p>
       </div>
 
