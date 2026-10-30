@@ -5,6 +5,7 @@
 
 export const members = [
   { name: 'Canada Africa Fintech Summit', logo: '/assets/member-cafs.png', url: 'https://cafsummit.com' },
+  { name: 'Africa Fintech Network', logo: '/assets/member-afn.png', url: 'https://africafintechnetwork.com' },
   { name: 'Fintech Magazine Africa', logo: '/assets/member-fintech-magazine-africa.png', dark: true },
   { name: 'Capay', logo: '/assets/member-capay.png' },
   { name: 'Ebibie — Stratégie et Innovation', logo: '/assets/member-ebibie.png' },
