@@ -46,14 +46,13 @@ export function TopAnnouncementBanner() {
             <div className="flex flex-1 flex-wrap items-center justify-center gap-x-2.5 gap-y-1 text-center sm:justify-center">
               <span className="inline-flex items-center gap-1.5 font-bold text-blue-300">
                 <Icon name="spark" className="h-3.5 w-3.5 text-blue-300" ariaHidden={true} />
-                <span>Concours FinTech Gabon</span>
+                <span>Elite FinTech Competition</span>
               </span>
 
               <span className="hidden text-white/30 sm:inline" aria-hidden="true">·</span>
 
-              {/* Mention obligatoire : Gratuit et ouvert à tous */}
-              <span className="rounded-full bg-emerald-500/20 px-2 py-0.5 text-[11px] font-semibold text-emerald-300">
-                Gratuit et ouvert à tous
+              <span className="rounded-full bg-amber-400/15 px-2 py-0.5 text-[11px] font-semibold text-amber-200">
+                1re édition · Sur invitation
               </span>
 
               <span className="hidden text-white/30 md:inline" aria-hidden="true">·</span>

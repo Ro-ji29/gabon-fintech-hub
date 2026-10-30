@@ -107,8 +107,8 @@ export function Header() {
                 </span>
                 <span>Participer au concours</span>
               </div>
-              <span className="rounded-full bg-emerald-500/20 px-2.5 py-0.5 text-[10px] font-bold text-emerald-200">
-                Gratuit & ouvert à tous
+              <span className="rounded-full bg-amber-400/20 px-2.5 py-0.5 text-[10px] font-bold text-amber-200">
+                Sur invitation
               </span>
             </Link>
 
@@ -135,7 +135,7 @@ export function Header() {
                 ? 'bg-blue-700 text-white hover:bg-blue-800 hover:shadow-md ring-1 ring-blue-600/30'
                 : 'bg-blue-300 text-navy-950 hover:bg-blue-200 hover:shadow-[0_0_15px_rgba(56,189,248,0.45)] ring-1 ring-blue-200/50'
             )}
-            title="Concours FinTech Gabon · Gratuit et ouvert à tous"
+            title="Elite FinTech Competition · 1re édition · Sur invitation"
           >
             <span>Participer au concours</span>
             <Icon name="spark" className="h-3.5 w-3.5 shrink-0" ariaHidden={true} />
