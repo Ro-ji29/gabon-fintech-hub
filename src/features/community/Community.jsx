@@ -4,6 +4,7 @@ import { Icon } from '../../components/Icon';
 import { Button } from '../../components/Button';
 import { Eyebrow } from '../../components/Eyebrow';
 import { ScrollReveal } from '../../components/ScrollReveal';
+import { members } from '../../data/members';
 
 export function Community() {
   const shouldReduceMotion = useReducedMotion();
@@ -33,70 +34,89 @@ export function Community() {
   ];
 
   return (
-    <section id="communautes" className="relative isolate overflow-hidden bg-navy-800 px-5 py-16 text-white lg:px-8 lg:py-24">
-      {/* ── Illustration orbitale des demi-cercles d'arrière-plan ────────────────────────── */}
-      <div className="pointer-events-none absolute -right-20 top-[-18rem] -z-10 h-[620px] w-[620px] select-none" aria-hidden="true">
-        {/* Anneau 1 (externe, 620px) : rotation horaire avec nœuds satellites lumineux en orbite */}
-        <motion.div
-          className="absolute inset-0 rounded-full border border-white/15"
-          animate={shouldReduceMotion ? { rotate: 0 } : { rotate: 360 }}
-          transition={{ duration: 46, repeat: Infinity, ease: 'linear' }}
-        >
-          <span className="absolute -top-1.5 left-1/2 h-3 w-3 -translate-x-1/2 rounded-full bg-blue-300 shadow-[0_0_14px_rgba(56,189,248,0.9)]" />
-          <span className="absolute bottom-1/4 -left-1 h-2 w-2 rounded-full bg-blue-200/80 shadow-[0_0_10px_rgba(56,189,248,0.7)]" />
-        </motion.div>
+    <section id="communautes" className="relative isolate overflow-hidden bg-navy-800 py-16 text-white lg:py-24">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_440px]">
+          <ScrollReveal className="max-w-2xl">
+            <Eyebrow light>ÉCOSYSTÈME & COMMUNAUTÉ</Eyebrow>
+            <h2 className="font-display text-4xl font-semibold leading-[1.04] tracking-[-.06em] md:text-5xl">
+              Le progrès circule quand on <span className="text-blue-300">se connecte.</span>
+            </h2>
+            <p className="mt-5 max-w-xl text-sm leading-6 text-white/75 sm:text-base">
+              Un réseau d’acteurs engagés qui partagent leurs expertises, expérimentent
+              et bâtissent ensemble une finance plus inclusive et performante au Gabon.
+            </p>
 
-        {/* Anneau 2 (intermédiaire, inset-16) : rotation anti-horaire à tirets radar */}
-        <motion.div
-          className="absolute inset-16 rounded-full border border-dashed border-blue-300/35"
-          animate={shouldReduceMotion ? { rotate: 0 } : { rotate: -360 }}
-          transition={{ duration: 58, repeat: Infinity, ease: 'linear' }}
-        >
-          <span className="absolute top-1/3 -right-1 h-2.5 w-2.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.85)]" />
-        </motion.div>
+            {/* Membres (mobile et tablette) */}
+            <ul className="mt-8 flex flex-wrap gap-3 lg:hidden" aria-label="Nos membres">
+              {members.map((m) => (
+                <li key={m.name}>
+                  <MemberBadge member={m} />
+                </li>
+              ))}
+            </ul>
+          </ScrollReveal>
 
-        {/* Anneau 3 (interne, inset-36) : onde de propagation concentrique */}
-        <motion.div
-          className="absolute inset-36 rounded-full border border-white/20"
-          animate={
-            shouldReduceMotion
-              ? { scale: 1, opacity: 0.25 }
-              : {
-                  scale: [1, 1.04, 1],
-                  opacity: [0.2, 0.5, 0.2],
-                }
-          }
-          transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut' }}
-        >
-          <span className="absolute bottom-2 left-1/3 h-1.5 w-1.5 rounded-full bg-blue-300/90 shadow-[0_0_6px_rgba(56,189,248,0.8)]" />
-        </motion.div>
+          {/* Orbite des logos membres (ordinateur) */}
+          <div className="relative hidden aspect-square w-full lg:block" aria-label="Nos membres">
+            <motion.div
+              className="absolute inset-0 rounded-full border border-white/15"
+              animate={shouldReduceMotion ? { rotate: 0 } : { rotate: 360 }}
+              transition={{ duration: 46, repeat: Infinity, ease: 'linear' }}
+              aria-hidden="true"
+            >
+              <span className="absolute -top-1.5 left-1/2 h-3 w-3 -translate-x-1/2 rounded-full bg-blue-300 shadow-[0_0_14px_rgba(56,189,248,0.9)]" />
+            </motion.div>
+            <motion.div
+              className="absolute inset-[18%] rounded-full border border-dashed border-blue-300/35"
+              animate={shouldReduceMotion ? { rotate: 0 } : { rotate: -360 }}
+              transition={{ duration: 58, repeat: Infinity, ease: 'linear' }}
+              aria-hidden="true"
+            >
+              <span className="absolute top-1/3 -right-1 h-2.5 w-2.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.85)]" />
+            </motion.div>
+            <motion.div
+              className="absolute inset-[36%] grid place-items-center rounded-full border border-blue-400/30 bg-navy-700/60 text-center"
+              animate={shouldReduceMotion ? { scale: 1 } : { scale: [1, 1.04, 1] }}
+              transition={{ duration: 4.2, repeat: Infinity, ease: 'easeInOut' }}
+            >
+              <span className="font-display text-[10px] font-bold tracking-[.2em] text-blue-200">
+                NOS<br />MEMBRES
+              </span>
+            </motion.div>
 
-        {/* Anneau 4 (cœur orbital, inset-56) : pulsation centrale douce */}
-        <motion.div
-          className="absolute inset-56 rounded-full border border-blue-400/30 bg-blue-400/[0.02]"
-          animate={
-            shouldReduceMotion
-              ? { scale: 1, opacity: 0.3 }
-              : {
-                  scale: [1, 1.06, 1],
-                  opacity: [0.25, 0.6, 0.25],
-                }
-          }
-          transition={{ duration: 4.2, repeat: Infinity, ease: 'easeInOut' }}
-        />
-      </div>
-
-      <div className="mx-auto max-w-7xl">
-        <ScrollReveal className="max-w-2xl">
-          <Eyebrow light>ÉCOSYSTÈME & COMMUNAUTÉ</Eyebrow>
-          <h2 className="font-display text-4xl font-semibold leading-[1.04] tracking-[-.06em] md:text-5xl">
-            Le progrès circule quand on <span className="text-blue-300">se connecte.</span>
-          </h2>
-          <p className="mt-5 max-w-xl text-sm leading-6 text-white/75 sm:text-base">
-            Un réseau d’acteurs engagés qui partagent leurs expertises, expérimentent
-            et bâtissent ensemble une finance plus inclusive et performante au Gabon.
-          </p>
-        </ScrollReveal>
+            {/* Logos en orbite lente ; chaque badge reste droit */}
+            <motion.div
+              className="absolute inset-0"
+              animate={shouldReduceMotion ? { rotate: 0 } : { rotate: 360 }}
+              transition={{ duration: 90, repeat: Infinity, ease: 'linear' }}
+            >
+              {members.map((m, i) => {
+                const angle = (i / members.length) * 2 * Math.PI - Math.PI / 2;
+                return (
+                  <div
+                    key={m.name}
+                    className="absolute -translate-x-1/2 -translate-y-1/2"
+                    style={{ left: `${50 + 41 * Math.cos(angle)}%`, top: `${50 + 41 * Math.sin(angle)}%` }}
+                  >
+                    <motion.div
+                      animate={shouldReduceMotion ? { rotate: 0 } : { rotate: -360 }}
+                      transition={{ duration: 90, repeat: Infinity, ease: 'linear' }}
+                    >
+                      <motion.div
+                        animate={shouldReduceMotion ? { y: 0 } : { y: [-3, 3, -3] }}
+                        transition={{ duration: 3.6 + (i % 3) * 0.6, repeat: Infinity, ease: 'easeInOut' }}
+                        whileHover={{ scale: 1.08 }}
+                      >
+                        <MemberBadge member={m} />
+                      </motion.div>
+                    </motion.div>
+                  </div>
+                );
+              })}
+            </motion.div>
+          </div>
+        </div>
 
         {/* Typologies d'acteurs fédérés */}
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -151,5 +171,25 @@ export function Community() {
         </ScrollReveal>
       </div>
     </section>
+  );
+}
+
+function MemberBadge({ member }) {
+  const badge = (
+    <span
+      className={`grid h-14 w-[124px] place-items-center rounded-full px-4 shadow-lg ring-1 transition ${
+        member.dark ? 'bg-navy-950 ring-white/20' : 'bg-white ring-white/40'
+      }`}
+      title={member.name}
+    >
+      <img src={member.logo} alt={member.name} className="max-h-9 max-w-full object-contain" loading="lazy" />
+    </span>
+  );
+  return member.url ? (
+    <a href={member.url} target="_blank" rel="noopener noreferrer" aria-label={member.name}>
+      {badge}
+    </a>
+  ) : (
+    badge
   );
 }
